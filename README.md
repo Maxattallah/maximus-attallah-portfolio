@@ -1,5 +1,3 @@
-# Forma Studio — Haircut Appointment Website
+# Maximus Attallah — Creative Media & PR Portfolio
 
-A polished, responsive salon booking page built as a self-contained plugin deliverable.
-
-Open `index.html` in a browser to preview it. The form is intentionally front-end only: it demonstrates service selection, stylist preferences, date/time picking, and a confirmation modal without requiring a backend.
+Single-page responsive portfolio site for Maximus Attallah. The site is self-contained in `index.html`, uses Tailwind CSS via CDN, and includes an accessible mobile menu, smooth-scroll navigation, print-to-PDF résumé action, and a front-end contact-form thank-you state.
