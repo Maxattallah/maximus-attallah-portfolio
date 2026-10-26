@@ -86,6 +86,16 @@
   <script>
     document.querySelector('a[href="https://www.linkedin.com/"]').href = 'https://www.linkedin.com/in/maximusattallah/';
     document.querySelector('a[href="https://www.youtube.com/"]').href = 'https://www.youtube.com/@ThePopTwins';
+    const socialLinks = document.querySelector('a[href="https://www.linkedin.com/"]').parentElement;
+    [['TikTok', 'https://www.tiktok.com/@thepoptwins_'], ['Facebook', 'https://www.facebook.com/thepoptwins/']].forEach(([label, href]) => {
+      const link = document.createElement('a');
+      link.href = href;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.className = 'hover:text-amber-400';
+      link.textContent = label;
+      socialLinks.appendChild(link);
+    });
     const workCards = [...document.querySelectorAll('#portfolio article')];
     if (workCards[0]) {
       workCards[0].querySelector('h3').textContent = 'Patagonia R.O.P.E. Model & PR Campaign';
