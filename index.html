@@ -93,17 +93,6 @@
     const printResume = () => { const link = document.createElement('a'); link.href = 'maximus-attallah-resume.pdf'; link.download = 'Maximus-Attallah-Resume.pdf'; link.target = '_blank'; link.rel = 'noopener noreferrer'; document.body.appendChild(link); link.click(); link.remove(); };
     document.getElementById('print-resume').addEventListener('click', printResume);
     document.getElementById('print-resume-top').addEventListener('click', printResume);
-    const resumePreviewLink = document.createElement('a');
-    resumePreviewLink.href = 'maximus-attallah-resume.pdf';
-    resumePreviewLink.target = '_blank';
-    resumePreviewLink.rel = 'noopener noreferrer';
-    resumePreviewLink.className = 'mx-auto mt-10 block max-w-lg overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft';
-    const resumePreview = document.createElement('img');
-    resumePreview.src = 'maximus-attallah-resume-preview.png';
-    resumePreview.alt = 'Preview of Maximus Attallah résumé';
-    resumePreview.className = 'h-auto w-full';
-    resumePreviewLink.appendChild(resumePreview);
-    document.querySelector('#resume .mx-auto').appendChild(resumePreviewLink);
     document.getElementById('contact-form').addEventListener('submit', (event) => { event.preventDefault(); const name = new FormData(event.currentTarget).get('name') || 'there'; const status = document.getElementById('form-status'); status.textContent = `Thank you for reaching out, ${name}! I’ll be in touch soon.`; status.classList.remove('hidden'); event.currentTarget.reset(); });
   </script>
 </body>
