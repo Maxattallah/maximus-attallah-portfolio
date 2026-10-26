@@ -90,6 +90,25 @@
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => { const open = menuToggle.getAttribute('aria-expanded') === 'true'; menuToggle.setAttribute('aria-expanded', String(!open)); menuToggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu'); mobileMenu.classList.toggle('hidden', open); });
     document.querySelectorAll('#mobile-menu a').forEach((link) => link.addEventListener('click', () => { menuToggle.setAttribute('aria-expanded', 'false'); mobileMenu.classList.add('hidden'); }));
+    const workCards = [...document.querySelectorAll('#portfolio article')];
+    if (workCards[0]) {
+      workCards[0].querySelector('h3').textContent = 'Patagonia R.O.P.E. Model & PR Campaign';
+      workCards[0].querySelector('p:nth-of-type(1)').textContent = 'COMM 3313 final project and collaborative public-relations campaign. Team project with Marcus Attallah, Esteban Contreras, and Maximus Paul.';
+      const patagoniaLink = workCards[0].querySelector('a');
+      patagoniaLink.href = 'patagonia-rope-model.pdf';
+      patagoniaLink.target = '_blank';
+      patagoniaLink.rel = 'noopener noreferrer';
+      patagoniaLink.textContent = 'View Patagonia Campaign PDF ↗';
+    }
+    if (workCards[3]) {
+      workCards[3].querySelector('h3').textContent = 'CCEP Election Fair 2026 Integrated Strategy';
+      workCards[3].querySelector('p:nth-of-type(1)').textContent = 'Client Hub 5 proposal for the California Center for Ethics and Policy. Collaborative strategy project with Marcus Attallah.';
+      const ccepLink = workCards[3].querySelector('a');
+      ccepLink.href = 'ccep-election-fair-strategy.pdf';
+      ccepLink.target = '_blank';
+      ccepLink.rel = 'noopener noreferrer';
+      ccepLink.textContent = 'View CCEP Strategy PDF ↗';
+    }
     const printResume = () => { const link = document.createElement('a'); link.href = 'maximus-attallah-resume.pdf'; link.download = 'Maximus-Attallah-Resume.pdf'; link.target = '_blank'; link.rel = 'noopener noreferrer'; document.body.appendChild(link); link.click(); link.remove(); };
     document.getElementById('print-resume').addEventListener('click', printResume);
     document.getElementById('print-resume-top').addEventListener('click', printResume);
