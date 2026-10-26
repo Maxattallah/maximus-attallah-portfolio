@@ -105,6 +105,13 @@
       ccepLink.rel = 'noopener noreferrer';
       ccepLink.textContent = 'View CCEP Strategy PDF ↗';
     }
+    if (workCards[1]) {
+      const videoLink = workCards[1].querySelector('a');
+      videoLink.href = 'https://www.tiktok.com/t/ZPLA7qecW/';
+      videoLink.target = '_blank';
+      videoLink.rel = 'noopener noreferrer';
+      videoLink.textContent = 'Watch TikTok Video ↗';
+    }
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => { const open = menuToggle.getAttribute('aria-expanded') === 'true'; menuToggle.setAttribute('aria-expanded', String(!open)); menuToggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu'); mobileMenu.classList.toggle('hidden', open); });
