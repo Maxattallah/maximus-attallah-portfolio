@@ -86,10 +86,6 @@
   <script>
     document.querySelector('a[href="https://www.linkedin.com/"]').href = 'https://www.linkedin.com/in/maximusattallah/';
     document.querySelector('a[href="https://www.youtube.com/"]').href = 'https://www.youtube.com/@ThePopTwins';
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuToggle.addEventListener('click', () => { const open = menuToggle.getAttribute('aria-expanded') === 'true'; menuToggle.setAttribute('aria-expanded', String(!open)); menuToggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu'); mobileMenu.classList.toggle('hidden', open); });
-    document.querySelectorAll('#mobile-menu a').forEach((link) => link.addEventListener('click', () => { menuToggle.setAttribute('aria-expanded', 'false'); mobileMenu.classList.add('hidden'); }));
     const workCards = [...document.querySelectorAll('#portfolio article')];
     if (workCards[0]) {
       workCards[0].querySelector('h3').textContent = 'Patagonia R.O.P.E. Model & PR Campaign';
@@ -109,6 +105,10 @@
       ccepLink.rel = 'noopener noreferrer';
       ccepLink.textContent = 'View CCEP Strategy PDF ↗';
     }
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => { const open = menuToggle.getAttribute('aria-expanded') === 'true'; menuToggle.setAttribute('aria-expanded', String(!open)); menuToggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu'); mobileMenu.classList.toggle('hidden', open); });
+    document.querySelectorAll('#mobile-menu a').forEach((link) => link.addEventListener('click', () => { menuToggle.setAttribute('aria-expanded', 'false'); mobileMenu.classList.add('hidden'); }));
     const printResume = () => { const link = document.createElement('a'); link.href = 'maximus-attallah-resume.pdf'; link.download = 'Maximus-Attallah-Resume.pdf'; link.target = '_blank'; link.rel = 'noopener noreferrer'; document.body.appendChild(link); link.click(); link.remove(); };
     document.getElementById('print-resume').addEventListener('click', printResume);
     document.getElementById('print-resume-top').addEventListener('click', printResume);
