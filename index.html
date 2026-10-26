@@ -90,7 +90,7 @@
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => { const open = menuToggle.getAttribute('aria-expanded') === 'true'; menuToggle.setAttribute('aria-expanded', String(!open)); menuToggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu'); mobileMenu.classList.toggle('hidden', open); });
     document.querySelectorAll('#mobile-menu a').forEach((link) => link.addEventListener('click', () => { menuToggle.setAttribute('aria-expanded', 'false'); mobileMenu.classList.add('hidden'); }));
-    const printResume = () => window.open('maximus-attallah-resume.pdf', '_blank', 'noopener,noreferrer');
+    const printResume = () => { const link = document.createElement('a'); link.href = 'maximus-attallah-resume.pdf'; link.download = 'Maximus-Attallah-Resume.pdf'; link.target = '_blank'; link.rel = 'noopener noreferrer'; document.body.appendChild(link); link.click(); link.remove(); };
     document.getElementById('print-resume').addEventListener('click', printResume);
     document.getElementById('print-resume-top').addEventListener('click', printResume);
     const resumePreviewLink = document.createElement('a');
