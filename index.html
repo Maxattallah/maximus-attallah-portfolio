@@ -122,6 +122,15 @@
       videoLink.rel = 'noopener noreferrer';
       videoLink.textContent = 'Watch TikTok Video ↗';
     }
+    if (workCards[2]) {
+      workCards[2].querySelector('h3').textContent = 'Featured Instagram Reel';
+      workCards[2].querySelector('p:nth-of-type(1)').textContent = 'Short-form video project showcased on a featured Instagram account. Video production, editing, and creative direction by Maximus Attallah.';
+      const instagramFeatureLink = workCards[2].querySelector('a');
+      instagramFeatureLink.href = 'https://www.instagram.com/reel/DeEztEzRH5o/';
+      instagramFeatureLink.target = '_blank';
+      instagramFeatureLink.rel = 'noopener noreferrer';
+      instagramFeatureLink.textContent = 'Watch Featured Instagram Reel ↗';
+    }
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => { const open = menuToggle.getAttribute('aria-expanded') === 'true'; menuToggle.setAttribute('aria-expanded', String(!open)); menuToggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu'); mobileMenu.classList.toggle('hidden', open); });
