@@ -133,6 +133,16 @@
       instagramFeatureLink.rel = 'noopener noreferrer';
       instagramFeatureLink.textContent = 'Watch Featured Instagram Reel ↗';
     }
+    if (workCards[4]) {
+      workCards[4].querySelector('h3').textContent = 'CCEP Election Fair Audience Persona';
+      workCards[4].querySelector('p:nth-of-type(1)').textContent = 'COMM 3313 audience research project created for the CCEP Election Fair campaign. Developed three student personas to guide nonpartisan voting-awareness content.';
+      workCards[4].querySelector('p:nth-of-type(2)').textContent = 'Connected each persona to a tailored content idea, including commuter-budget Reels, approachable voting-guide videos, and campus interview content.';
+      const personaLink = workCards[4].querySelector('a');
+      personaLink.href = 'audience-persona-ccep-election-fair.pdf';
+      personaLink.target = '_blank';
+      personaLink.rel = 'noopener noreferrer';
+      personaLink.textContent = 'View Audience Persona PDF ↗';
+    }
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => { const open = menuToggle.getAttribute('aria-expanded') === 'true'; menuToggle.setAttribute('aria-expanded', String(!open)); menuToggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu'); mobileMenu.classList.toggle('hidden', open); });
